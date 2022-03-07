@@ -1,0 +1,53 @@
+# Non-parameter variable used to control the size of the simulation
+_size = 64
+
+# Input/output
+initial_conditions = [
+	{
+	'species': 'warm dark matter',
+	'N'      : _size**3,
+
+	},
+	{
+	'species':'baryons',
+	'N'      :_size**3
+	}#/*,
+	#{
+	#'species': 'cold dark matter',
+	#'N'	 : _size**3,
+	#}
+]
+output_dirs = {
+    'snapshot' : f'{../Bachelors-Project_WDM}/{param}',
+    'powerspec': ...,
+    'render2D' : ...,
+    'render3D' : ...,
+}
+output_times = {
+    'snapshot' : [0.1,0.3,0.5],
+    'powerspec': [a_begin, 0.3, 1],
+    'render3D' : ...,
+    'render2D' : logspace(log10(a_begin), log10(1), 15),
+}
+powerspec_select = {
+    'matter': {'data': True, 'linear': True, 'plot': False},
+}
+
+# Numeris
+boxsize = 128*Mpc
+potential_options = 2*_size
+
+# Cosmology
+H0      = 67*km/(s*Mpc)
+Ωb      = 0.049
+Ωcdm    = 0.27
+a_begin = 0.02
+ 
+# Class parameters
+class_params={
+	'H0'	     : H0/(km/(s*Mpc)),
+	'Omega_b'    : 0.05,
+	'Omega_cdm'  : 1e-6,
+	'N_ndcm'     : 1,
+	'Omega_ncdm' : 0.25,
+	}
