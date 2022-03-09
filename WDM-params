@@ -3,19 +3,19 @@ _size = 64
 
 # Input/output
 initial_conditions = [
-	{
-	'species': 'warm dark matter',
-	'N'      : _size**3,
+	#{
+	#'species': 'warm dark matter',
+	#'N'      : _size**3,
 
-	},
+	#},
 	{
 	'species':'baryons',
 	'N'      :_size**3
-	}#/*,
-	#{
-	#'species': 'cold dark matter',
-	#'N'	 : _size**3,
-	#}
+	},
+	{
+	'species': 'cold dark matter',
+	'N'	 : _size**3,
+	}
 ]
 output_dirs = {
     'snapshot' : f'{../Bachelors-Project_WDM}/{param}',
