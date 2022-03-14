@@ -6,13 +6,13 @@
 
 # Input/output
 _size = 128
-initial_conditions = {
-    "name": 'matter',
-    'species': 'b+wdm+cdm',
-    'N'      : _size**3,
-}
+initial_conditions = [
+    {'species': 'b' , 'N': _size**3},
+    {'species':'wdm', 'N':_size**3 },
+    {'species':'cdm', 'N':_size**3 },
+]
 output_dirs = {
-    'snapshot' : 'output/WDMgraphics/1000eV',
+    'snapshot' : 'output/WDMgraphics/3_species',
     'powerspec': ...,
     'render2D' : ...,
     'render3D' : ...,
@@ -50,7 +50,7 @@ primordial_spectrum = {
 class_params={
     'N_ncdm':1,
     'Omega_ncdm':0.25,
-    'm_ncdm': 1000,
+    'm_ncdm': 50,
 }
 # Graphics
 render2D_options = {
@@ -65,7 +65,9 @@ render2D_options = {
     },
 }
 render3D_colors = {
-    'matter': 'lime',
+    'wdm': 'lime',
+    'cdm': 'turquoise',
+    'b'  : 'turqioise',
 }
 render3D_bgcolor    = 'black'
 render3D_resolution = 640
