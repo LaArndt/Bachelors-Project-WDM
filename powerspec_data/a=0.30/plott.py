@@ -33,5 +33,5 @@ plt.legend(loc="lower left")
 plt.xlabel("k[Mpc⁻¹]", fontsize=15)
 plt.ylabel("power[Mpc³]", fontsize=15)
 
-plt.savefig("powerspectra_a=0.30",format="png")
+plt.savefig("powerspectra_a=0.30.png",format="png")
 plt.show()
