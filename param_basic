@@ -12,7 +12,7 @@ initial_conditions = {
     'N'      : _size**3,
 }
 output_dirs = {
-    'snapshot' : 'output/WDMgraphics/1000eV',
+    'snapshot' : 'output/WDMgraphics/300eV',
     'powerspec': ...,
     'render2D' : ...,
     'render3D' : ...,
@@ -50,7 +50,7 @@ primordial_spectrum = {
 class_params={
     'N_ncdm':1,
     'Omega_ncdm':0.25,
-    'm_ncdm': 1000,
+    'm_ncdm': 300,
 }
 # Graphics
 render2D_options = {
